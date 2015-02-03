@@ -615,7 +615,8 @@ a:active {
 	.menu-toggle:visited,
 	.menu-toggle:link{
 		font-family: 'Lato', sans-serif;
-		margin-top: 1em;
+		font-size: 1em;
+		margin-top: .5em;
 		display: inline-block;
 		border: none;
 		-webkit-box-shadow: none;
@@ -935,10 +936,21 @@ object {
 /*--------------------------------------------------------------
 12.2 Site Logo
 --------------------------------------------------------------*/
+.logo-wrapper {
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: .3em 1em;
+}
+
+.logo-wrapper a {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
 
 .bennett-logo{
 	width: 30px;
 	display: inline-block;
-	float: left;
-	margin: 7px 15px;
+	margin: 0
 }

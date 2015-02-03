@@ -19,11 +19,16 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'anthony-bennett' ); ?></a>
-
+	<a class="skip-link screen-reader-text" href="#content">
+		<?php _e( 'Skip to content', 'anthony-bennett' ); ?>
+	</a>
 	<header id="masthead" class="site-header" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/ant_bennet_ico.png" alt="" class="bennett-logo">
+			<div class="logo-wrapper">
+				<a href="<?php echo get_template_directory_uri(); ?>/index.php" >
+					<img src="<?php echo get_template_directory_uri(); ?>/img/ant_bennet_ico.png" alt="" class="bennett-logo">
+				</a>
+			</div>
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'anthony-bennett' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
