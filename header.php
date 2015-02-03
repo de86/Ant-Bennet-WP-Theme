@@ -24,18 +24,28 @@
 	</a>
 	<header id="masthead" class="site-header" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'anthony-bennett' ); ?></button>
 			<div class="logo-wrapper">
-				<a href="<?php echo get_template_directory_uri(); ?>/index.php" >
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" >
 					<img src="<?php echo get_template_directory_uri(); ?>/img/ant_bennet_ico.png" alt="" class="bennett-logo">
 				</a>
 			</div>
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'anthony-bennett' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 		
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		<?php if ( get_header_image() && (get_header_textcolor() ==='blank') ) : ?>
+			<div class="header-img">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+				</a>
+			</div>
+		<?php endif; // End header image check. ?>
+
+		<div class="site-branding header-background-img" style="background-image: url(<?php header_image(); ?>)">
+			<div class="container960">
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</div>
 		</div><!-- .site-branding -->
 
 		<?php bennett_social_media_menu(); ?>

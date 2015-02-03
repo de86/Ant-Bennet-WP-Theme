@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Normalize
+	1.1 Universal Styles 
 2.0 Typography
 3.0 Elements
 4.0 Forms
@@ -42,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.1 Captions
 	12.2 Galleries
 	12.3 Site Logo
+	12.4 Header
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -264,6 +266,15 @@ th {
 }
 
 /*--------------------------------------------------------------
+13.0 Universal Styles
+--------------------------------------------------------------*/
+
+.container960 {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
 body,
@@ -284,6 +295,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: 'Lato';
 }
 
 p {
@@ -349,6 +361,12 @@ small {
 
 big {
 	font-size: 125%;
+}
+
+.logo-text{
+	display: block;
+	vertical-align: top;
+	padding-top: .5em;
 }
 
 /*--------------------------------------------------------------
@@ -616,7 +634,7 @@ a:active {
 	.menu-toggle:link{
 		font-family: 'Lato', sans-serif;
 		font-size: 1em;
-		margin-top: .5em;
+		margin: .3em 0;
 		display: inline-block;
 		border: none;
 		-webkit-box-shadow: none;
@@ -624,6 +642,7 @@ a:active {
 		background-color: #ccc;
 		background-color: transparent;
 		color: #fcfcfc;
+		float: left;
 	}
 
 	.menu-toggle:hover{
@@ -639,6 +658,7 @@ a:active {
 
 	.main-navigation.toggled .nav-menu {
 		display: block;
+		float: none;
 	}
 
 	.main-navigation ul {
@@ -757,6 +777,8 @@ a:active {
 .site-footer:after {
 	clear: both;
 }
+
+
 
 /*--------------------------------------------------------------
 9.0 Widgets
@@ -934,23 +956,104 @@ object {
 }
 
 /*--------------------------------------------------------------
-12.2 Site Logo
+12.3 Site Logo
 --------------------------------------------------------------*/
+
 .logo-wrapper {
 	display: inline-block;
 	float: left;
 	margin: 0;
-	padding: .3em 1em;
+	padding: .5em;
 }
 
 .logo-wrapper a {
 	display: inline;
 	margin: 0;
 	padding: 0;
+	vertical-align: top;
 }
 
 .bennett-logo{
-	width: 30px;
-	display: inline-block;
+	width: 300px;
+	display: block;
 	margin: 0
+}
+
+/*--------------------------------------------------------------
+12.4 Header
+--------------------------------------------------------------*/
+
+.header-img img{
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.site-branding {
+	padding: 150px 0 200px 0;
+}
+
+.header-background-img {
+	background: no-repeat;
+	background-postion: center center;
+	-webkit-background-size: cover!important;
+	   -moz-background-size: cover!important;
+			background-size: cover!important;
+}
+
+.site-title{
+	font-size: .8em;
+	margin-bottom: 8em;
+	line-height: 0;
+}
+
+.site-title a,
+.site-title a:link,
+.site-title a:visited {
+	text-decoration: none;
+	color: #9578bb;
+}
+
+.site-title a:hover{
+	color: #fafafa;
+}
+
+.site-description {
+	font-size: 9em;
+	margin: 1em 0 0 0;
+	line-height: 0;
+	color: #fcfcfc;
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.logo-wrapper {
+		width: 200px;
+		float: right;
+	}
+
+	.site-branding {
+		padding: 66px 20px 70px 0;
+	}
+
+	.site-title{
+		font-size: 1em;
+		margin-bottom: 3em;
+		line-height: 0;
+	}
+
+	.site-description {
+		font-size: 3em;
+		margin: 1em 0 0 0;
+		line-height: 0;
+		color: #fcfcfc;
+		text-align: left;
+	}
+
+}
+
+@media screen and (max-width: 410px) {
+	/* .logo-wrapper {
+		width: 200px;
+	} */
 }

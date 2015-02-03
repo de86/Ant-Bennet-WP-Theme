@@ -26,9 +26,9 @@ function anthony_bennett_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'anthony_bennett_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
+		'width'                  => 1366,
+		'height'                 => 500,
+		'flex-height'            => false,
 		'wp-head-callback'       => 'anthony_bennett_header_style',
 		'admin-head-callback'    => 'anthony_bennett_admin_header_style',
 		'admin-preview-callback' => 'anthony_bennett_admin_header_image',
