@@ -276,7 +276,7 @@ function bennett_social_media_menu() {
 			'theme_location'  => 'social_media',
 			'container'       => 'div',
 			'container_id'    => 'menu-social',
-			'container_class' => 'menu-social',
+			'container_class' => 'menu-social container960',
 			'menu_id'         => 'menu-social-items',
 			'menu_class'      => 'menu-items',
 			'depth'           => 1,

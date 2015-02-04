@@ -47,8 +47,15 @@
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 		</div><!-- .site-branding -->
-
-		<?php bennett_social_media_menu(); ?>
+		<div class="social-nav">
+			<div class="container960">
+				<a class="social-icon icon-fb" href="#"></a>
+				<a class="social-icon icon-tw" href="#"></a>
+				<a class="social-icon icon-in" href="#"></a>
+				<a class="social-icon icon-blog" href="#"></a>
+				<a class="social-icon icon-donate" href="#"></a>
+			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

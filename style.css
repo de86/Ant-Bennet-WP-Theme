@@ -43,7 +43,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.1 Captions
 	12.2 Galleries
 	12.3 Site Logo
-	12.4 Header
+13.0 Header
+14.0 Social Menu
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -712,6 +713,7 @@ a:active {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+	right: 0;
 }
 
 .screen-reader-text:hover,
@@ -1067,7 +1069,7 @@ object {
 	}
 
 	.site-description {
-		font-size: 3em;
+		font-size: 2.5em;
 		margin: 1em 0 0 0;
 		line-height: 0;
 		color: #fcfcfc;
@@ -1076,3 +1078,176 @@ object {
 
 }
 
+/*--------------------------------------------------------------
+14 Social Menu
+--------------------------------------------------------------*/
+
+.social-nav {
+	background-color: #5e3790;
+	text-align: center;
+}
+
+.menu-social {
+	
+}
+
+.social-icon {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin: 2em 3em;
+	background-size: cover;
+}
+
+.social-icon:first-child {
+	margin-left: 0;
+}
+
+.social-icon:last-child {
+	margin-right: 0;
+}
+
+.icon-fb {
+	background: url('img/social/social-icon-sprite.png') 0 0 no-repeat;
+}
+
+.icon-fb:hover {
+	background: url('img/social/social-icon-sprite.png') -100px 0 no-repeat;
+}
+
+.icon-tw {
+	background: url('img/social/social-icon-sprite.png') -200px 0 no-repeat;
+}
+
+.icon-tw:hover {
+	background: url('img/social/social-icon-sprite.png') -300px 0 no-repeat;
+}
+
+.icon-in {
+	background: url('img/social/social-icon-sprite.png') -400px 0 no-repeat;
+}
+
+.icon-in:hover {
+	background: url('img/social/social-icon-sprite.png') -500px 0 no-repeat;
+}
+
+.icon-blog {
+	background: url('img/social/social-icon-sprite.png') -600px 0 no-repeat;
+}
+
+.icon-blog:hover {
+	background: url('img/social/social-icon-sprite.png') -700px 0 no-repeat;
+}
+
+.icon-donate {
+	background: url('img/social/social-icon-sprite.png') -800px 0 no-repeat;
+}
+
+.icon-donate:hover {
+	background: url('img/social/social-icon-sprite.png') -900px 0 no-repeat;
+}
+
+@media screen and (max-width: 980px) {
+	.social-icon {
+		width: 70px;
+		height: 70px;
+		margin: 1em 2em;
+	}
+
+		.icon-fb {
+		background: url('img/social/social-icon-sprite.png') 0 -100px no-repeat;
+	}
+
+	.icon-fb:hover {
+		background: url('img/social/social-icon-sprite.png') -70px -100px no-repeat;
+	}
+
+	.icon-tw {
+		background: url('img/social/social-icon-sprite.png') -140px -100px no-repeat;
+	}
+
+	.icon-tw:hover {
+		background: url('img/social/social-icon-sprite.png') -210px -100px no-repeat;
+	}
+
+	.icon-in {
+		background: url('img/social/social-icon-sprite.png') -280px -100px no-repeat;
+	}
+
+	.icon-in:hover {
+		background: url('img/social/social-icon-sprite.png') -350px -100px no-repeat;
+	}
+
+	.icon-blog {
+		background: url('img/social/social-icon-sprite.png') -420px -100px no-repeat;
+	}
+
+	.icon-blog:hover {
+		background: url('img/social/social-icon-sprite.png') -490px -100px no-repeat;
+	}
+
+	.icon-donate {
+		background: url('img/social/social-icon-sprite.png') -560px -100px no-repeat;
+	}
+
+	.icon-donate:hover {
+		background: url('img/social/social-icon-sprite.png') -630px -100px no-repeat;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.social-icon {
+		width: 50px;
+		height: 50px;
+		margin: 1em 1em;
+	}
+
+	.social-icon:first-child {
+		margin-left: 1em;
+	}
+
+.social-icon:last-child {
+		margin-right: 1em;
+	}
+
+	.icon-fb {
+		background: url('img/social/social-icon-sprite.png') 0 -170px no-repeat;
+	}
+
+	.icon-fb:hover {
+		background: url('img/social/social-icon-sprite.png') -50px -170px no-repeat;
+	}
+
+	.icon-tw {
+		background: url('img/social/social-icon-sprite.png') -100px -170px no-repeat;
+	}
+
+	.icon-tw:hover {
+		background: url('img/social/social-icon-sprite.png') -150px -170px no-repeat;
+	}
+
+	.icon-in {
+		background: url('img/social/social-icon-sprite.png') -200px -170px no-repeat;
+	}
+
+	.icon-in:hover {
+		background: url('img/social/social-icon-sprite.png') -250px -170px no-repeat;
+	}
+
+	.icon-blog {
+		background: url('img/social/social-icon-sprite.png') -300px -170px no-repeat;
+	}
+
+	.icon-blog:hover {
+		background: url('img/social/social-icon-sprite.png') -350px -170px no-repeat;
+	}
+
+	.icon-donate {
+		background: url('img/social/social-icon-sprite.png') -400px -170px no-repeat;
+	}
+
+	.icon-donate:hover {
+		background: url('img/social/social-icon-sprite.png') -450px -170px no-repeat;
+	}
+
+}
