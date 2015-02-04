@@ -95,6 +95,7 @@ template {
 
 a {
 	background-color: transparent;
+	text-decoration: none;
 }
 
 a:active,
@@ -259,17 +260,36 @@ optgroup {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	font-family: 'Lato', Arial, sans-serif;
+	font-size: 1.2em;
 }
 
 td,
 th {
-	padding: 0;
+	padding: .4em;
+}
+
+dl {
+	font-family: 'Lato', Arial, sans-serif;
+	font-size: 1.2em;
+}
+
+@media screen and (max-width: 600px) {
+
+	table,
+	dl {
+		font-size: 1em;
+	}
+
+	td,
+	th {
+		padding: .2em;
+	}
 }
 
 /*--------------------------------------------------------------
-13.0 Universal Styles
+1.1 Universal Styles
 --------------------------------------------------------------*/
-
 .container960 {
 	width: 960px;
 	margin: 0 auto;
@@ -278,6 +298,7 @@ th {
 @media screen and (max-width: 960px){
 	.container960 {	
 		width: 100%;
+		padding: 1em;
 		margin: 0;
 	}
 }
@@ -303,11 +324,15 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: 'Lato';
+	font-family: 'Lato', Arial, sans-serif;
+	color: #5e3790;
 }
 
 p {
 	margin-bottom: 1.5em;
+	font-family: 'Lato', Arial, sans-serif;
+	font-size: 1.2em;
+	line-height: 2em;
 }
 
 b,
@@ -323,7 +348,26 @@ i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0; 
+	padding: 1em 1.5em .5em 1.2em;
+	/* border-bottom:5px solid #5e3790; */
+	border-left: 10px solid #5e3790;
+	/* border-top:7px solid #5e3790; */
+	font-family: 'PT Serif', georgia, serif;
+	font-style: italic;
+	background-color: #ece4f8;
+}
+
+blockquote p {
+	display: inline;
+}
+
+blockquote p:before {
+	color: #404040;
+	content: "\201C";
+	font-size: 4em;
+	margin-right: .5em;
+	vertical-align: -.4em;
 }
 
 address {
@@ -331,7 +375,7 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: #ece4f8;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -377,11 +421,32 @@ big {
 	padding-top: .5em;
 }
 
+@media screen and (max-width: 600px) {
+	blockquote {
+		padding: 1em 1.5em .5em 1.2em;
+		border-left: 5px solid #5e3790;
+		font-size: 1em;
+	}
+
+	blockquote p {
+		display: inline;
+	}
+
+	blockquote p:before {
+		color: #404040;
+		content: "\201C";
+		font-size: 2em;
+		margin-right: .5em;
+		vertical-align: -.4em;
+	}
+}
+
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
+	background-color: #fffcfd;
 }
 
 *,
@@ -391,7 +456,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	/*background: #fff;  Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -407,7 +472,7 @@ q {
 }
 
 hr {
-	background-color: #ccc;
+	background-color: #5e3790;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -416,6 +481,8 @@ hr {
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
+	font-size: 1.2em;
+	font-family: 'Lato', Arial, sans-serif;
 }
 
 ul {
@@ -529,18 +596,15 @@ textarea {
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-
-a:visited {
-	color: purple;
+a,
+a:visited  {
+	color: #5e3790;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #e0d3f2;
 }
 
 a:focus {
@@ -813,6 +877,19 @@ a:active {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+
+.entry-title {
+	font-size: 2.5em;
+	font-weight: 900;
+}
+
+.entry-footer,
+.cat-links,
+.tags-links,
+.edit-link {
+	font-family: 'Lato', Arial, sans-serif;
+}
+
 .sticky {
 	display: block;
 }
@@ -993,14 +1070,6 @@ object {
 12.4 Header
 --------------------------------------------------------------*/
 
-/* .header-img img{
-	clear: both;
-	display: block;
-	margin: 0 auto;
-	padding: 0;
-}
- */
-
 .site-branding {
 	padding: 4em;
 }
@@ -1022,7 +1091,7 @@ object {
 .site-title a:link,
 .site-title a:visited {
 	text-decoration: none;
-	color: #9578bb;
+	color: #e0d3f2;
 }
 
 .site-title a:hover{
