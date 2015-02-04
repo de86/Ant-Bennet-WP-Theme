@@ -274,6 +274,13 @@ th {
 	margin: 0 auto;
 }
 
+@media screen and (max-width: 960px){
+	.container960 {	
+		width: 100%;
+		margin: 0;
+	}
+}
+
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
@@ -550,7 +557,7 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
+	float: none;
 	width: 100%;
 	background-color: #5e3790;
 	text-transform: uppercase;
@@ -657,6 +664,7 @@ a:active {
 	}
 
 	.main-navigation.toggled .nav-menu {
+		margin-top: 3em;
 		display: block;
 		float: none;
 	}
@@ -983,28 +991,29 @@ object {
 12.4 Header
 --------------------------------------------------------------*/
 
-.header-img img{
+/* .header-img img{
+	clear: both;
 	display: block;
 	margin: 0 auto;
 	padding: 0;
 }
+ */
 
 .site-branding {
-	padding: 150px 0 200px 0;
+	padding: 4em;
 }
 
 .header-background-img {
 	background: no-repeat;
-	background-postion: center center;
+	background-postion: top right;
 	-webkit-background-size: cover!important;
 	   -moz-background-size: cover!important;
 			background-size: cover!important;
 }
 
 .site-title{
-	font-size: .8em;
-	margin-bottom: 8em;
-	line-height: 0;
+	font-size: 1em;
+	margin: 0 0 4em 0;
 }
 
 .site-title a,
@@ -1020,10 +1029,25 @@ object {
 
 .site-description {
 	font-size: 9em;
-	margin: 1em 0 0 0;
-	line-height: 0;
+	margin: 0 0 0 0;
+	line-height: 1em;
 	color: #fcfcfc;
 	text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+	.site-description {
+		text-align: left;
+		font-size: 6em;
+	}
+
+}
+
+@media screen and (max-width: 780px) {
+	.site-description {
+		font-size: 4em;
+	}
+
 }
 
 @media screen and (max-width: 600px) {
@@ -1033,7 +1057,7 @@ object {
 	}
 
 	.site-branding {
-		padding: 66px 20px 70px 0;
+		padding: 3em 1em 4em 1em;
 	}
 
 	.site-title{
@@ -1052,8 +1076,3 @@ object {
 
 }
 
-@media screen and (max-width: 410px) {
-	/* .logo-wrapper {
-		width: 200px;
-	} */
-}

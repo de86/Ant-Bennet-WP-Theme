@@ -23,7 +23,7 @@
 		<?php _e( 'Skip to content', 'anthony-bennett' ); ?>
 	</a>
 	<header id="masthead" class="site-header" role="banner">
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation" class="main-navigation clear" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'anthony-bennett' ); ?></button>
 			<div class="logo-wrapper">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" >
