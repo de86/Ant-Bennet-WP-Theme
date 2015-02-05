@@ -92,7 +92,7 @@ function anthony_bennett_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . ', </span><span class="byline"> ' . 'Anthony Bennet' . '</span>';
+	echo '<span class="posted-on">' . $posted_on . ', </span><br><span class="byline"> Written By ' . 'Anthony Bennet' . '</span>';
 
 }
 endif;
@@ -105,15 +105,16 @@ function anthony_bennett_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'anthony-bennett' ) );
-		if ( $categories_list && anthony_bennett_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'anthony-bennett' ) . '</span>', $categories_list );
+		$tags_list = get_the_tag_list( '<ul class="tags-links"><li class="tag-list-item">', __( '</li><li class="tag-list-item">', 'anthony-bennett' ), '<li class="tag-list-item"></ul>' );
+		if ( $tags_list ) {
+			/*printf( '<span class="tags-links">' . __( '%1$s', 'anthony-bennett' ) . '</span>', $tags_list );*/
+			printf( '' . __( '%1$s', 'anthony-bennett' ) . '</ul><br>', $tags_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'anthony-bennett' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'anthony-bennett' ) . '</span>', $tags_list );
+		$categories_list = get_the_category_list( __( ',', 'anthony-bennett' ) );
+		if ( $categories_list && anthony_bennett_categorized_blog() ) {
+			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'anthony-bennett' ) . '</span><br>', $categories_list );
 		}
 	}
 
