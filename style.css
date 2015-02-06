@@ -45,6 +45,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.3 Site Logo
 13.0 Header
 14.0 Social Menu
+15.0 Help Section
+16.0 Footer
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -536,8 +538,11 @@ dd {
 }
 
 img {
+	display: inline-block;
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+	border-radius: 2px;
+	margin: 1em 0;
 }
 
 table {
@@ -1005,12 +1010,31 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.front-post-title {
+	margin: 0;
+	padding: 0;
+}
+
+.front-page-post {
+	margin-top: 4em;
+}
+
+.mission-heading{
+	margin-top: 4em;
+}
+
+@media screen and (max-width: 600px){
+	.mission-heading{
+		margin-top: 2em;
+	}	
 }
 
 /*--------------------------------------------------------------
@@ -1413,4 +1437,98 @@ object {
 		background: url('img/social/social-icon-sprite.png') -450px -170px no-repeat;
 	}
 
+}
+
+/*--------------------------------------------------------------
+15.0 Help Section
+--------------------------------------------------------------*/
+
+.help {
+	background-color: #5e3790;
+	margin: 3em 0;
+	padding: 0 3em;
+}
+
+.help-div {
+	float: left;
+	width: 50%;
+	text-align: center;
+	padding: 1.5em 4em;
+}
+
+.help h2,
+.help h3,
+.help p{
+	color: #fcfcfc;
+}
+
+.help h3 {
+	font-size: 2em;
+	margin: 0;
+}
+
+.help h2 {
+	font-size: 4em;
+	margin: .5em;
+	text-align: center;
+	line-height: 1.2em;
+}
+
+.donate {
+	width: 150px;
+}
+
+.challenge {
+	width: 150px;
+}
+
+@media screen and (max-width: 680px) {
+
+	
+
+	.help h3 {
+		font-size: 1.5em;
+	}
+
+	.help h2 {
+		font-size: 2em;
+	}
+
+	.help p {
+		font-size: 1em;
+	}
+
+	.help {
+		margin: 1em 0;
+	}
+
+	.help-img {
+		width: 100px;	
+	}
+
+	.help-div {
+		display: block;
+		width: 100%;
+		font-size: 1em;
+	}
+
+	.donate {
+		width: 100px;
+	}
+
+	.challenge {
+		width: 100px;
+	}
+}
+
+/*--------------------------------------------------------------
+16.0 Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+	background-color: #5e3790;
+}
+
+.site-info a {
+	color: #fcfcfc;
 }
