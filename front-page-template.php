@@ -18,24 +18,24 @@ get_header(); ?>
 	</div>
 
 	<div id="help" class="help clear">
-		<!-- <div class="container960 help-container"> -->
+		<!--<div class="container960 help-container">-->
 			<h2>How you can help</h2>
-			<div class="help-div">
+			<div id="donate-div" class="help-div">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/donate.png" class="help-img donate">
 				<h3>Donate</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt dui consectetur nisi tempor euismod. Mauris sed tincidunt mi.</p>
 			</div>
-			<div class="help-div">
+			<div id="challenge-div" class="help-div">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/challenge.png" class="help-img challenge">
 				<h3>Challenge Me</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt dui consectetur nisi tempor euismod. Mauris sed tincidunt mi.</p>
 			</div>
-		<!-- </div> -->
+		<!--</div>-->
 	</div>
 
 	<div id="primary" class="content-area">
 		<div class="container960">
-			<h2>Latest News...</h2>
+			<h2 class="front-page-heading">Latest News...</h2>
 			<main id="main" class="site-main" role="main">
 			<?php
 				$args = array( 'posts_per_page' => 5 );

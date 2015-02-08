@@ -305,8 +305,12 @@ dl {
 1.1 Universal Styles
 --------------------------------------------------------------*/
 .container960 {
-	width: 960px;
+	width: 900px;
 	margin: 0 auto;
+}
+
+.hidden {
+	display: none;
 }
 
 @media screen and (max-width: 960px){
@@ -347,7 +351,7 @@ h2 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin: 0 0 1.5em 0;
 	font-family: 'Lato', Arial, sans-serif;
 	font-size: 1.2em;
 	line-height: 2em;
@@ -371,7 +375,7 @@ cite {
 }
 
 blockquote {
-	margin: 0; 
+	margin: 2em 0 2em 0; 
 	padding: 1em 4em .8em 1.2em;
 	/* border-bottom:5px solid #5e3790; */
 	border-left: 10px solid #5e3790;
@@ -542,7 +546,6 @@ img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 	border-radius: 2px;
-	margin: 1em 0;
 }
 
 table {
@@ -686,11 +689,17 @@ a:active {
 	position: relative;
 }
 
+.main-navigation li a{
+	float: left;
+	position: relative;
+	font-size: .8em;
+}
+
 .main-navigation a {
 	display: block;
 	text-decoration: none;
 	color: #fcfcfc;
-	padding: 1em;
+	padding: 1.2em 2.5em;
 }
 
 .main-navigation ul ul {
@@ -870,13 +879,13 @@ a:active {
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
+	margin: 0 1.5em 1.5em 0;
 }
 
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
+	margin: 0 0 1.5em 1.5em;
 }
 
 .aligncenter {
@@ -884,6 +893,16 @@ a:active {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media screen and (max-width: 600px){
+	.alignleft,
+	.alignright,
+	.aligncenter {
+		text-align: center;
+		float:none;
+		width:95%;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -939,11 +958,17 @@ a:active {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+.front-page-heading{
+	font-size: 2.3em;
+	font-weight: 900;
+	margin: 1.5em 0 1.2em 0;
+	clear: both;
+}
 
 .entry-title {
-	font-size: 2.5em;
+	font-size: 2.3em;
 	font-weight: 900;
-	margin: 1.5em 0 .3em;
+	margin: 1.2em 0 1.2em;
 }
 
 .entry-date.
@@ -1282,7 +1307,7 @@ object {
 	display: inline-block;
 	width: 100px;
 	height: 100px;
-	margin: 2em 3em;
+	margin: 2em 2.98em;
 	background-size: cover;
 }
 
@@ -1446,14 +1471,14 @@ object {
 .help {
 	background-color: #5e3790;
 	margin: 3em 0;
-	padding: 0 3em;
+	padding: 0 6em;
 }
 
 .help-div {
 	float: left;
 	width: 50%;
 	text-align: center;
-	padding: 1.5em 4em;
+	padding: 1.5em 2em;
 }
 
 .help h2,
@@ -1474,6 +1499,10 @@ object {
 	line-height: 1.2em;
 }
 
+.help img{
+	margin-bottom: 1.5em;
+}
+
 .donate {
 	width: 150px;
 }
@@ -1482,7 +1511,7 @@ object {
 	width: 150px;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 700px) {
 
 	
 
