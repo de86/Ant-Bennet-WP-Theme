@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.1 Captions
 	12.2 Galleries
 	12.3 Site Logo
+	12.5 Feaeture Image
 13.0 Header
 14.0 Social Menu
 15.0 Help Section
@@ -968,7 +969,7 @@ a:active {
 .entry-title {
 	font-size: 2.3em;
 	font-weight: 900;
-	margin: 1.2em 0 1.2em;
+	margin: 1.2em 0 .5em;
 }
 
 .entry-date.
@@ -1288,6 +1289,15 @@ object {
 		text-align: left;
 	}
 
+}
+
+/*--------------------------------------------------------------
+12.5 Feature Image
+--------------------------------------------------------------*/
+
+.single-post-thumb img{
+	width: 100%;
+	margin: 2.5em 0;
 }
 
 /*--------------------------------------------------------------

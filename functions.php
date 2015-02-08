@@ -40,13 +40,15 @@ function anthony_bennett_setup() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
+	add_image_size('large_thumb', 1366, 450, true);
+	add_image_size('index_thumb', 900 , 150, true);
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
