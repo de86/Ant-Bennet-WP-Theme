@@ -96,6 +96,15 @@ function anthony_bennett_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer Widgets', 'anthony-bennett' ),
+		'id'            => 'sidebar-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'anthony_bennett_widgets_init' );
 
@@ -105,6 +114,8 @@ add_action( 'widgets_init', 'anthony_bennett_widgets_init' );
 function anthony_bennett_scripts() {
 	wp_enqueue_style( 'anthony-bennett-style', get_stylesheet_uri() );
 
+	/*wp_enqueue_style( 'anthony-bennett-style-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css' );*/
+
 	wp_enqueue_style( 'anthony-bennett-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:400,900|PT+Serif:400,400italic,700italic' );
 
 	wp_enqueue_style( 'anthony-bennett-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
@@ -112,6 +123,8 @@ function anthony_bennett_scripts() {
 	wp_enqueue_script( 'anthony-bennett-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'anthony-bennett-mainjs', get_template_directory_uri() . '/js/main.js', array('jquery'), '20150208', true );
+
+	wp_enqueue_script( 'anthony-bennett-masonry-settings', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20150210', true );
 
 	wp_enqueue_script( 'anthony-bennett-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

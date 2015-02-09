@@ -43,9 +43,18 @@ get_header(); ?>
 				foreach ( $lastposts as $post ) :
 				  setup_postdata( $post ); ?>
 					<div class="front-page-post">
-						<h2 class="front-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<time class="entry-date published updated"><?php the_date(); ?></p>
-						<?php the_content(' Read more...'); ?>
+					<?php 
+						if (has_post_thumbnail()) {
+							echo '<div class="single-post-thumb index-post-thumb clear">';
+							echo the_post_thumbnail('index_thumb');
+							echo '</div>';
+						}
+					?>
+						<div class="blog-index-post">
+							<h2 class="front-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							<time class="entry-date published updated"><?php the_date(); ?></p>
+							<?php the_content(' Read more...'); ?>
+						</div>
 					</div>
 				<?php endforeach; 
 				wp_reset_postdata(); ?>

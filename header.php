@@ -43,8 +43,10 @@
 
 		<div class="site-branding header-background-img" style="background-image: url(<?php header_image(); ?>)">
 			<div class="container960">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<div class="header-content-container">
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				</div>
 			</div>
 		</div><!-- .site-branding -->
 		<div class="social-nav">
@@ -52,7 +54,7 @@
 				<a class="social-icon icon-fb" href="#"></a>
 				<a class="social-icon icon-tw" href="#"></a>
 				<a class="social-icon icon-in" href="#"></a>
-				<a class="social-icon icon-blog" href="#"></a>
+				<a class="social-icon icon-blog" href="http://localhost/wp_theme_dev/?page_id=703"></a>
 				<a class="social-icon icon-donate" href="#"></a>
 			</div>
 		</div>

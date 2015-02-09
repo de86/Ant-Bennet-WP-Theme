@@ -515,7 +515,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 1.5em;
 	font-size: 1.2em;
 	font-family: 'Lato', Arial, sans-serif;
 }
@@ -531,7 +531,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 
 dt {
@@ -880,13 +880,15 @@ a:active {
 .alignleft {
 	display: inline;
 	float: left;
-	margin: 0 1.5em 1.5em 0;
+	margin: .6em 1.5em 1.5em 0;
+	vertical-align: top;
 }
 
 .alignright {
 	display: inline;
 	float: right;
-	margin: 0 0 1.5em 1.5em;
+	margin: .6em 0 1.5em 1.5em;
+	vertical-align: top;
 }
 
 .aligncenter {
@@ -894,6 +896,7 @@ a:active {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: .5em;
 }
 
 @media screen and (max-width: 600px){
@@ -934,13 +937,30 @@ a:active {
 	clear: both;
 }
 
+.content-area {
+	padding-top: 2em;
+}
 
 
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 3em;
+}
+
+.widget ul{
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.widget ul li{
+	margin-left: 0;
+}
+
+.widget a {
+
 }
 
 /* Make sure select elements fit in widgets. */
@@ -953,6 +973,45 @@ a:active {
 	display: none;
 }
 
+/* Footer Widgets */
+
+.footer-widgets {
+	margin: 0 auto;
+}
+
+.footer-widgets .widget{
+	float: left;
+	width: 300px;
+	margin: 1.5em;
+}
+
+.footer-widgets h1,
+.footer-widgets h2,
+.footer-widgets h3,
+.footer-widgets a,
+.site-info a {
+	color: #fcfcfc;
+}
+
+.footer-widgets td,
+.footer-widgets th {
+
+}
+
+.footer-widgets thead tr {
+	background-color: #5e3790;
+}
+
+tr:nth-child(even) {
+	background-color: #5e3790;
+}
+
+.footer-widgets thead,
+.footer-widgets tr {
+	border-bottom: 2px solid #ECE4F8;
+}
+
+
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -962,14 +1021,14 @@ a:active {
 .front-page-heading{
 	font-size: 2.3em;
 	font-weight: 900;
-	margin: 1.5em 0 1.2em 0;
+	margin: 1.5em 0 1.5em 0;
 	clear: both;
 }
 
 .entry-title {
 	font-size: 2.3em;
 	font-weight: 900;
-	margin: 1.2em 0 .5em;
+	margin: 1.5em 0 1.5em;
 }
 
 .entry-date.
@@ -1057,10 +1116,26 @@ a:active {
 	margin-top: 4em;
 }
 
+.blog-index-post {
+	border-left: 3px solid #ece4f8;
+	padding: 1.5em ;
+	margin-bottom: 5em;
+}
+
+.blog-index-post h1 {
+	margin-top: 0;
+}
+
 @media screen and (max-width: 600px){
 	.mission-heading{
 		margin-top: 2em;
 	}	
+
+	.blog-index-post {
+		border-left: none;
+		padding: 1em 0 0 0;
+		margin-bottom: 2em;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1194,7 +1269,8 @@ object {
 	display: inline-block;
 	float: left;
 	margin: 0;
-	padding: .5em;
+	padding: .95em .95em .95em 1.5em;
+	width: 225px;
 }
 
 .logo-wrapper a {
@@ -1214,8 +1290,16 @@ object {
 12.4 Header
 --------------------------------------------------------------*/
 
+/* header {
+	margin-bottom: 3em;
+} */
+
 .site-branding {
 	padding: 4em;
+}
+
+.header-content-container {
+	width: 500px;
 }
 
 .header-background-img {
@@ -1228,7 +1312,7 @@ object {
 
 .site-title{
 	font-size: 1em;
-	margin: 0 0 4em 0;
+	margin: 0 0 2em 0;
 }
 
 .site-title a,
@@ -1243,11 +1327,10 @@ object {
 }
 
 .site-description {
-	font-size: 9em;
+	font-size: 4em;
 	margin: 0 0 0 0;
 	line-height: 1em;
 	color: #fcfcfc;
-	text-align: center;
 }
 
 @media screen and (max-width: 1100px) {
@@ -1294,10 +1377,18 @@ object {
 /*--------------------------------------------------------------
 12.5 Feature Image
 --------------------------------------------------------------*/
-
+.single-post-thumb {
+	text-align: center;
+	background-color: #ece4f8;
+	margin: 1.5em 0;
+}
 .single-post-thumb img{
-	width: 100%;
-	margin: 2.5em 0;
+	display: block;
+	margin: 0 auto;
+}
+
+.index-post-thumb {
+	margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1307,6 +1398,7 @@ object {
 .social-nav {
 	background-color: #5e3790;
 	text-align: center;
+	box-shadow: 0 5px 10px #ddd;
 }
 
 .menu-social {
@@ -1566,8 +1658,8 @@ object {
 
 .site-footer {
 	background-color: #5e3790;
+	color: #fcfcfc;
+	padding: 2em;
+	font-size: .8em;
 }
 
-.site-info a {
-	color: #fcfcfc;
-}
