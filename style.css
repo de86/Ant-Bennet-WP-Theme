@@ -616,6 +616,7 @@ textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+	margin-bottom: 2em;
 }
 
 input[type="text"]:focus,
@@ -938,10 +939,12 @@ a:active {
 }
 
 .content-area {
-	padding-top: 2em;
+	/* padding-top: 2em; */
 }
 
-
+.site-footer {
+	margin-top: 3em;
+}
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
@@ -1021,14 +1024,14 @@ tr:nth-child(even) {
 .front-page-heading{
 	font-size: 2.3em;
 	font-weight: 900;
-	margin: 1.5em 0 1.5em 0;
+	margin: 0 0 1.5em 0;
 	clear: both;
 }
 
 .entry-title {
 	font-size: 2.3em;
 	font-weight: 900;
-	margin: 1.5em 0 1.5em;
+	margin: 0 0 1.5em 0;
 }
 
 .entry-date.
@@ -1399,6 +1402,7 @@ object {
 	background-color: #5e3790;
 	text-align: center;
 	box-shadow: 0 5px 10px #ddd;
+	margin-bottom: 3em;
 }
 
 .menu-social {
@@ -1663,3 +1667,10 @@ object {
 	font-size: .8em;
 }
 
+/*--------------------------------------------------------------
+16.0 Footer
+--------------------------------------------------------------*/
+
+.social-media-feather {
+	float: right;
+}

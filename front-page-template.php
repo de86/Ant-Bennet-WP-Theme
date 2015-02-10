@@ -50,10 +50,11 @@ get_header(); ?>
 							echo '</div>';
 						}
 					?>
-						<div class="blog-index-post">
+						<div class="blog-index-post clear">
 							<h2 class="front-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<time class="entry-date published updated"><?php the_date(); ?></p>
 							<?php the_content(' Read more...'); ?>
+							
 						</div>
 					</div>
 				<?php endforeach; 
