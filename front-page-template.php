@@ -71,7 +71,7 @@ get_header(); ?>
 						<div class="blog-more-post clear">
 							<h2 class="more-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<time class="entry-date published updated"><?php the_date(); ?></p>
-							<?php the_content(' Read more...'); ?>
+							<?php the_excerpt(); ?>
 						</div>
 				<?php endforeach; 
 				wp_reset_postdata(); ?>

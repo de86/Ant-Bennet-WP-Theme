@@ -1331,23 +1331,28 @@ object {
 }
 
 .site-description {
-	font-size: 4em;
+	font-size: 2.5em;
 	margin: 0 0 0 0;
-	line-height: 1em;
+	line-height: 1.5em;
 	color: #fcfcfc;
 }
 
 @media screen and (max-width: 1100px) {
 	.site-description {
+		font-size: 2em;
 		text-align: left;
-		font-size: 6em;
 	}
 
 }
 
 @media screen and (max-width: 780px) {
+
+	.site-branding {
+		padding: 2em;
+	}
+
 	.site-description {
-		font-size: 4em;
+		font-size: 1.5em;
 	}
 
 }
@@ -1359,7 +1364,7 @@ object {
 	}
 
 	.site-branding {
-		padding: 3em 1em 4em 1em;
+		padding: 1.1em 1em 1em 1em;
 	}
 
 	.site-title{
@@ -1369,11 +1374,15 @@ object {
 	}
 
 	.site-description {
-		font-size: 2.5em;
+		font-size: 1em;
 		margin: 1em 0 0 0;
-		line-height: 0;
+		line-height: 1.5em;
 		color: #fcfcfc;
 		text-align: left;
+	}
+
+	.header-content-container {
+		width: 100%;
 	}
 
 }
