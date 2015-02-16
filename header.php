@@ -51,9 +51,9 @@
 		</div><!-- .site-branding -->
 		<div class="social-nav">
 			<div class="container960">
-				<a class="social-icon icon-fb" href="#"></a>
-				<a class="social-icon icon-tw" href="#"></a>
-				<a class="social-icon icon-in" href="#"></a>
+				<a class="social-icon icon-fb" href="https://www.facebook.com/pages/Iamantbennett/695542953853645"></a>
+				<a class="social-icon icon-tw" href="https://twitter.com/iamantbennett"></a>
+				<a class="social-icon icon-in" href="http://instagram.com/iamantbennett"></a>
 				<a class="social-icon icon-blog" href="http://localhost/wp_theme_dev/?page_id=703"></a>
 				<a class="social-icon icon-donate" href="#"></a>
 			</div>

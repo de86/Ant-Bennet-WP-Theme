@@ -38,7 +38,7 @@ get_header(); ?>
 			<h2 class="front-page-heading">Latest News...</h2>
 			<main id="main" class="site-main" role="main">
 			<?php
-				$args = array( 'posts_per_page' => 5 );
+				$args = array( 'posts_per_page' => 1 );
 				$lastposts = get_posts( $args );
 				foreach ( $lastposts as $post ) :
 				  setup_postdata( $post ); ?>
@@ -61,7 +61,24 @@ get_header(); ?>
 				wp_reset_postdata(); ?>
 
 			</main><!-- #main -->
-		</div><!-- .container690 -->
+
+			<div id="more-posts" class="more-posts-content clear">
+				<?php
+				$args = array( 'posts_per_page' => 3 );
+				$lastposts = get_posts( $args );
+				foreach ( $lastposts as $post ) :
+				  setup_postdata( $post ); ?>
+						<div class="blog-more-post clear">
+							<h2 class="more-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							<time class="entry-date published updated"><?php the_date(); ?></p>
+							<?php the_content(' Read more...'); ?>
+						</div>
+				<?php endforeach; 
+				wp_reset_postdata(); ?>
+		
+			</div>
+
+		</div><!-- .container960 -->
 	</div><!-- #primary -->
 
 

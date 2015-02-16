@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 14.0 Social Menu
 15.0 Help Section
 16.0 Footer
+17.0 More Posts
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -1673,4 +1674,55 @@ object {
 
 .social-media-feather {
 	float: right;
+}
+
+/*--------------------------------------------------------------
+17.0 More Posts
+--------------------------------------------------------------*/
+
+.blog-more-post {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	width: 33%;
+	float: left;
+	padding: 1em;
+}
+
+.blog-more-post:first-child {
+	padding-left: 0;
+}
+
+.blog-more-post:last-child {
+	padding-right: 0;
+}
+
+.blog-more-post p {
+	font-size: 1em;
+}
+
+.more-post-title {
+	font-size: 1.5em;
+}
+
+@media screen and (max-width: 900px){
+	.blog-more-post {
+		float: left;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.blog-more-post {
+		width: 100%;
+		display: block;
+		float: none;
+		padding: 0;
+	}
+}
+/*--------------------------------------------------------------
+18.0 Contact Form
+--------------------------------------------------------------*/
+
+.wpcf7-form p {
+	margin-bottom: 0;
 }
